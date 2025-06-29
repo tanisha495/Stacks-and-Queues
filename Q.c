@@ -4,7 +4,6 @@
 int queue[SIZE];
 int front = -1, rear = -1;
 
-// Enqueue
 void enqueue(int value) {
     if ((rear + 1) % SIZE == front) {
         printf("Queue is full (Overflow)\n");
@@ -18,7 +17,7 @@ void enqueue(int value) {
     queue[rear] = value;
     printf("%d enqueued\n", value);
 }
-// Dequeue
+
 void dequeue() {
     if (front == -1) {
         printf("Queue is empty (Underflow)\n");
@@ -33,7 +32,7 @@ void dequeue() {
 
     printf("%d dequeued\n", deleted);
 }
-//Front element
+
 void peek() {
     if (front == -1) {
         printf("Queue is empty\n");
@@ -41,7 +40,7 @@ void peek() {
     }
     printf("Front element is: %d\n", queue[front]);
 }
-// Display queue
+
 void display() {
     if (front == -1) {
         printf("Queue is empty\n");
